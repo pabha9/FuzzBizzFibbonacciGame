@@ -26,14 +26,14 @@ def primeChecker(n): #checking for prime numbers
 def divisibleChecker(n):
     a = primeChecker(n)
     if a == False:
-        if n % 3 == 0: 
-                print("Buzz")
-        if n % 5 == 0:
-                 print("Fizz\t")
-        if n % 15 ==0: 
-            print("FizzBuzz\t")
-        elif (not(n % 3 ==0) and not(n%5 ==0) and not(n % 15 ==0)): #Check for all three because it was giving me bugs and printing corresponding fibbonacci numbers regardless
+       if n % 15 ==0: 
+            print("Buzz, Fizz, FizzBuzz")
+       elif (not(n % 3 ==0) and not(n%5 ==0) and not(n % 15 ==0)): #Check for all three because it was giving me bugs and printing corresponding fibbonacci numbers regardless
             print("corresponding fibbonacci number:", n)
+       elif n % 3 == 0: 
+                print("Buzz")
+       elif n % 5 == 0:
+                 print("Fizz")
     elif a == True: 
        
         if n == 3: 
@@ -46,6 +46,7 @@ def divisibleChecker(n):
 results = []          
 n = int(input("Please enter a number:"))
 for i in range(1,n):
+    #print(fib(i))
     results.append(divisibleChecker(fib(i)))
    # print(fib(i))
     
